@@ -13,15 +13,4 @@ public abstract class AbstractHandler {
     public abstract void change();
 
     public abstract void save();
-
-    static AbstractHandler getInstance(String fileExtension) {
-        if ("xml".equalsIgnoreCase(fileExtension))
-            return new XMLHandler();
-        else if ("doc".equalsIgnoreCase(fileExtension))
-            return new DOCHandler();
-        else if ("txt".equalsIgnoreCase(fileExtension)) {
-            return new TXTHandler();
-        } else throw new IllegalArgumentException();
-
-    }
 }
